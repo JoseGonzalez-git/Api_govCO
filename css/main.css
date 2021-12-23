@@ -2,7 +2,6 @@
 
 main {
   font-family: "Spartan", sans-serif;
-  margin-top: 30px;
 }
 
 table {
@@ -18,10 +17,10 @@ th {
   font-weight: bold;
   text-transform: uppercase;
 }
-th:first-child, td:first-child {
-    text-align: center;
+th:first-child,
+td:first-child {
+  text-align: center;
 }
-
 
 td {
   font-size: 0.8rem;
@@ -55,18 +54,29 @@ p {
   text-align: center;
 }
 
-.hero{
-    background: url(../img/img1.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
+.hero {
+  background: url(../img/img1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    text-align: center;
-    color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+
+img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
+.navbar>.container {
+    justify-content: center;
+    
 }
