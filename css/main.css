@@ -16,8 +16,10 @@ table {
 th {
   font-weight: bold;
   text-transform: uppercase;
+    font-size: 1rem;
 }
 th:first-child,
+th:last-child,
 td:first-child {
   text-align: center;
 }
@@ -58,7 +60,7 @@ p {
   background: url(../img/img1.jpg);
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 600px;
   display: flex;
   align-items: center;
 }
@@ -79,4 +81,19 @@ img {
 .navbar>.container {
     justify-content: center;
     
+}
+
+@media (max-width: 550px) {
+  th, td{
+    text-align: center;
+    font-size: 0.5rem;
+    padding: 0;
+  }
+  tbody > tr > td {
+    padding: 3px;
+    color: #fff;
+  }
+  table{
+    border-spacing: 0px 10px;
+  }
 }

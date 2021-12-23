@@ -27,13 +27,13 @@ document.getElementById("btnCargar").addEventListener("click", (e) => {
             const divApp = document.getElementById("app");
             const element = document.createElement("div");
             element.className = 'row';
-            let htmlTabla = `<table id="tablaDatos">
+            let htmlTabla = `<table class="table-dark" id="tablaDatos">
                             <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">nit</th>
-                            <th scope="col">razon_social</th>
-                            <th scope="col">total_patrimonio_2018</th>
+                            <th scope="col">Nit</th>
+                            <th scope="col">Razon social</th>
+                            <th scope="col">Total patrimonio 2018</th>
                             </tr>
                             </thead>`;
             data.forEach((element) => {
@@ -41,7 +41,7 @@ document.getElementById("btnCargar").addEventListener("click", (e) => {
                 <td scope = "row">${element.no}</td>
                 <td>${element.nit}</td>
                 <td>${element.razon_social}</td>
-                <td>$${element.ingresos_operacionales_2018}</td> `;
+                <td>$${element.ingresos_operacionales_2018} <a href="#"> > </a></td> `;
             });
             htmlTabla = htmlTabla + ` </tbody > </table > `;
             element.innerHTML = htmlTabla;
