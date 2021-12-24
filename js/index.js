@@ -133,15 +133,13 @@ document.getElementById("btnCalcular").addEventListener("click", (e) => {
             let htmlTabla = `<table class="table-dark" id="tablaDatos">
                             <thead>
                             <tr>
-                            <th scope="col">Nit</th>
                             <th scope="col">Razón Social</th>
-                            <th scope="col">Diferencia De Ingresos [2018-2017]</th>
-                            <th scope="col">Diferencia De Patrimonios [2018-2017]</th>
+                            <th scope="col">Diferencia De Ingresos <br/>[2018-2017]</th>
+                            <th scope="col">Diferencia De Patrimonios <br/>[2018-2017]</th>
                             </tr>
                             </thead>`;
             data.forEach((element) => {
                 htmlTabla = htmlTabla + `<tr>
-                <td scope = "row">${element.nit}</td>
                 <td>${element.razon_social}</td>
                 <td>$${element.ingresos_operacionales_2018 - element.ingresos_operacionales_2017}</td>
                 <td>$${element.total_patrimonio_2018-element.total_patrimonio_2017}

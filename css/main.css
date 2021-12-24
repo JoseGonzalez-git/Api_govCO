@@ -87,6 +87,9 @@ img {
   tbody > tr > td {
     padding: 4px;
   }
+  th{
+    font-size: 0.3rem;
+  }
   th, td{
     text-align: center;
     font-size: 0.4rem;
@@ -102,7 +105,7 @@ img {
     justify-content: center;
   }
 }
-@media (max-width: 700px) {
+@media (min-width: 550px) and (max-width: 700px) {
   th, td{
     text-align: center;
     font-size: 0.6rem;
@@ -113,4 +116,5 @@ img {
   button{
     margin-top:2px;
   }
+
 }
