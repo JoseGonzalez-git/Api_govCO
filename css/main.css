@@ -84,6 +84,9 @@ img {
 }
 
 @media (max-width: 550px) {
+  tbody > tr > td {
+    padding: 4px;
+  }
   th, td{
     text-align: center;
     font-size: 0.4rem;
