@@ -86,15 +86,17 @@ img {
 @media (max-width: 550px) {
   th, td{
     text-align: center;
-    font-size: 0.5rem;
+    font-size: 0.4rem;
     padding: 0;
   }
   tbody > tr > td {
-    padding: 3px;
     color: #fff;
   }
   table{
     border-spacing: 0px 10px;
+  }
+  .row{
+    justify-content: center;
   }
 }
 @media (max-width: 1000px) {

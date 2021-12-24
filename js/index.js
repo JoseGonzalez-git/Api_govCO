@@ -2,6 +2,12 @@ const api = "https://www.datos.gov.co/resource/8hn7-rpp8.json";
 
 var datosJson;
 
+function Clear(){
+    let table = document.getElementById('app');
+
+    table.innerHTML = '';
+}
+
 async function getAll() {
     try {
         const response = await fetch(api);
@@ -22,6 +28,7 @@ document.getElementById("btnCargar").addEventListener("click", (e) => {
             datosJson = data;
             const divApp = document.getElementById("app");
             const element = document.createElement("div");
+            Clear();
             element.className = 'row';
             let htmlTabla = `<table class="table-dark" id="tablaDatos">
                             <thead>
@@ -121,6 +128,7 @@ document.getElementById("btnCalcular").addEventListener("click", (e) => {
             datosJson = data;
             const divApp = document.getElementById("app");
             const element = document.createElement("div");
+            Clear();
             element.className = 'row';
             let htmlTabla = `<table class="table-dark" id="tablaDatos">
                             <thead>
