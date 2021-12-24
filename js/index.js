@@ -113,3 +113,36 @@ async function getMacrosectores() {
         console.log("Error: " + error);
     }
 }
+
+
+document.getElementById("btnCalcular").addEventListener("click", (e) => {
+    const todos = getAll()
+        .then(data => {
+            datosJson = data;
+            const divApp = document.getElementById("app");
+            const element = document.createElement("div");
+            element.className = 'row';
+            let htmlTabla = `<table class="table-dark" id="tablaDatos">
+                            <thead>
+                            <tr>
+                            <th scope="col">Nit</th>
+                            <th scope="col">Razón Social</th>
+                            <th scope="col">Diferencia De Ingresos [2018-2017]</th>
+                            <th scope="col">Diferencia De Patrimonios [2018-2017]</th>
+                            </tr>
+                            </thead>`;
+            data.forEach((element) => {
+                htmlTabla = htmlTabla + `<tr>
+                <td scope = "row">${element.nit}</td>
+                <td>${element.razon_social}</td>
+                <td>$${element.ingresos_operacionales_2018 - element.ingresos_operacionales_2017}</td>
+                <td>$${element.total_patrimonio_2018-element.total_patrimonio_2017}
+                <br/>
+                <a href="#" onclick="getAllAboutOne(${element.nit});return false;">Ver Datos</a>
+                </td> `;
+            });
+            htmlTabla = htmlTabla + ` </tbody > </table > `;
+            element.innerHTML = htmlTabla;
+            divApp.appendChild(element);
+        });
+});

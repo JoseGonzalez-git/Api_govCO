@@ -97,3 +97,8 @@ img {
     border-spacing: 0px 10px;
   }
 }
+@media (max-width: 1000px) {
+  button{
+    margin-top:2px;
+  }
+}
